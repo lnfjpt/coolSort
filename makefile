@@ -1,5 +1,5 @@
 CXX=g++
-CXXFLAGS=-g -Wall -std=c++11
+CXXFLAGS=-g -Wall -std=c++11 -pthread
 LDFLAGS=
 BUILDDIR=build
 TARGET=bin

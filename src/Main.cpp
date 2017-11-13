@@ -4,16 +4,12 @@
 
 #include "Order.h"
 #include "OrderAttr.h"
-
-void fun()
-{
-    std::cout << "A new thread!" << std::endl;
-}
+#include "OrderManage.h"
 
 int main()
 {
-    std::thread t(fun);
-    t.join();
-    std::cout<<"Main thread";
+    OrderManage rua;
+    std::thread order(orderHandle);
+    order.join();
     return 0;
 }

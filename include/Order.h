@@ -12,11 +12,25 @@ class Order
         Order(Side sideInput, std::string symbolInput, int orderQtyInput, double priceInput,
             TimeInForce timeInforceInput)
         {
+            side = sideInput;
+            symbol = symbolInput;
+            orderQty = orderQtyInput;
+            price = priceInput;
+            timeInforce = timeInforceInput;
+            cumQty = 0;
+            orderStatus = OrderStatus::New;
             return;
         }
 
         explicit Order(const Order & o)
         {
+            side = o.side;
+            symbol = o.symbol;
+            orderQty = o.orderQty;
+            price = o.price;
+            timeInforce = o.timeInforce;
+            cumQty = 0;
+            orderStatus = OrderStatus::New;
             return;
         }
 
